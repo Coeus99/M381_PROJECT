@@ -15,7 +15,7 @@ ull fib(int n)
 int main(int argc, char** argv)
 {
 
-    if ( argv != 2 )
+    if ( argc != 2 )
     {
         cout << "Usage: " << argv[0] << " n" << endl;
         return 1;

@@ -1,2 +1,2 @@
 dynamic: dynamic.cc
-	g++ dynamic.cc -o fib
+	g++ dynamic.cc -o fib -DTIME

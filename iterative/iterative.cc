@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <chrono>
 
 using namespace std;
 
@@ -31,7 +32,18 @@ int main(int argc, char** argv)
     int n = stoi(s_n);
     ull fib_n;
 
+#ifdef TIME
+    chrono::duration<double> elapsed_time;
+    auto start_time = chrono::system_clock::now();
+#endif
+
     fib_n = fib(n);
+
+#ifdef TIME
+    auto end_time = chrono::system_clock::now();
+    elapsed_time = end_time - start_time;
+    cout << elapsed_time.count() << "," << flush;
+#endif
 
     cout << fib_n << flush;
 

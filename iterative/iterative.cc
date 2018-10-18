@@ -7,7 +7,15 @@ typedef unsigned long long ull;
 
 ull fib(int n)
 {
-    return 1;
+    ull first = 1;
+    ull second = 1;
+    for (int i = 2; i < n; i++)
+    {
+        first = first + second;
+        second = first - second;
+    }
+
+    return first;
 }
 
 int main(int argc, char** argv)
@@ -24,6 +32,8 @@ int main(int argc, char** argv)
     ull fib_n;
 
     fib_n = fib(n);
+
+    cout << fib_n << flush;
 
     return 0;
 }

@@ -27,5 +27,7 @@ int main(int argc, char** argv)
 
     fib_n = fib(n);
 
+    cout << fib_n << flush;
+
     return 0;
 }

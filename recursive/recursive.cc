@@ -39,7 +39,7 @@ int main(int argc, char** argv)
     cout << elapsed_time.count() << "," << flush;
 #endif
 
-    cout << fib_n << flush;
+    cout << n << "," << fib_n << endl;
 
     return 0;
 }

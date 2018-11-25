@@ -5,6 +5,16 @@ recursive.df<-read.csv( "./recursive/data.csv" )
 dynamic.df<-read.csv( "./dynamic/data.csv" )
 iterative.df<-read.csv( "./iterative/data.csv" )
 
+#Mark each data frame with the algorithm type
+recursive.df$alg="rec"
+dynamic.df$alg="dyn"
+iterative.df$alg="it"
+
+#Combine them for ANOVA analysis later
+n1.df<-rbind(n1.dynamic.df,n1.iterative.df,n1.recursive.df)
+n25.df<-rbind(n25.dynamic.df,n25.iterative.df,n25.recursive.df)
+n50.df<-rbind(n50.dynamic.df,n50.iterative.df,n50.recursive.df)
+
 #Let's choose 3 n values to analyze
 n1.recursive.df<-subset( recursive.df, n == 1 )
 n25.recursive.df<-subset( recursive.df, n == 25 )

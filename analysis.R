@@ -10,11 +10,6 @@ recursive.df$alg="rec"
 dynamic.df$alg="dyn"
 iterative.df$alg="it"
 
-#Combine them for ANOVA analysis later
-n1.df<-rbind(n1.dynamic.df,n1.iterative.df,n1.recursive.df)
-n25.df<-rbind(n25.dynamic.df,n25.iterative.df,n25.recursive.df)
-n50.df<-rbind(n50.dynamic.df,n50.iterative.df,n50.recursive.df)
-
 #Let's choose 3 n values to analyze
 n1.recursive.df<-subset( recursive.df, n == 1 )
 n25.recursive.df<-subset( recursive.df, n == 25 )
@@ -27,6 +22,11 @@ n50.dynamic.df<-subset( dynamic.df, n == 50 )
 n1.iterative.df<-subset( iterative.df, n ==1 )
 n25.iterative.df<-subset( iterative.df, n == 25 )
 n50.iterative.df<-subset( iterative.df, n == 50 )
+
+#Combine them for ANOVA analysis later
+n1.df<-rbind(n1.dynamic.df,n1.iterative.df,n1.recursive.df)
+n25.df<-rbind(n25.dynamic.df,n25.iterative.df,n25.recursive.df)
+n50.df<-rbind(n50.dynamic.df,n50.iterative.df,n50.recursive.df)
 
 #Let's generate some boxplots
 boxplot(n1.recursive.df$t,main="Recursive, n=1",ylab="Time[s]")

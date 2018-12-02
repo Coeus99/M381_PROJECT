@@ -4,7 +4,7 @@ i) do boxplot by algorithm type
 
 ii) statistics -> means -> One-way ANOVA
     [x] Pairwise comparison of means
-    [x ] Welch F-test not assuming equal variance
+    [x] Welch F-test not assuming equal variance
         From numerical summary by group (more than twice sd implies population variances are not equal -> check box
 
     ->go back to analysis of variance able Pr(>F) is the most important (if the means are equal, what's the chance the data gives us results we got).

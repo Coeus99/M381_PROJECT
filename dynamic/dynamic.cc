@@ -8,9 +8,8 @@ typedef unsigned long long ull;
 
 ull fib(int n, ull *memo)
 {
-    if ( memo[n - 1] != 0 )
-        return memo[n - 1];
-    memo[n - 1] = fib(n - 1, memo) + fib(n - 2, memo);
+    if ( memo[n - 1] == 0 )
+        memo[n - 1] = fib(n - 1, memo) + fib(n - 2, memo);
     return memo[n - 1];
 }
 
